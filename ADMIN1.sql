@@ -21,7 +21,7 @@ ALTER TABLE t_despesas ADD CONSTRAINT t_despesas_pk PRIMARY KEY ( cd_despesas );
 CREATE TABLE t_investimentos (
     cd_investimento      NUMBER(*, 0) NOT NULL,
     t_usuario_cd_usuario NUMBER(*, 0) NOT NULL,
-    ds_descriÁ„o         VARCHAR2(100 BYTE) NOT NULL,
+    ds_descri√ß√£o         VARCHAR2(100 BYTE) NOT NULL,
     vl_investido         NUMBER(10, 2) NOT NULL,
     dt_registro          DATE
 );
@@ -69,24 +69,24 @@ INSERT INTO t_usuario
     VALUES ('1234567', 'Higor Vilela', '4hv@protonmail.com', TO_DATE('03/05/2004' , 'DD/MM/YYYY'), 11-99999-9999);
 
 INSERT INTO t_contas (cd_conta, cd_usuario, nm_banco, nr_agencia) 
-    VALUES ( 1 ,1234567, 'It·u', 12345678910);
+    VALUES ( 1 ,1234567, 'It√°u', 12345678910);
 
 UPDATE t_usuario
     SET nm_nome = 'Higor Vilela', id_email = '4hv@protonmail.com', dt_nasc = '03/05/2004' , nr_telefone = 11-99999-9999);
     WHERE cd_usuario = 1234567;
 
 INSERT INTO receitas (cd_despesas, cd_usuario, ds_descricao, vl_valor, dt_registro) 
-    VALUES (2, 1234567, 'Sal·rio', 2500.00, '05/01/2023');
+    VALUES (2, 1234567, 'Sal√°rio', 2500.00, '05/01/2023');
 
 UPDATE t_receitas
-    SET ds_descricao = 'BÙnus', vl_valor = 1000.00, dt_registro = '04/04/2023' 
+    SET ds_descricao = 'B√¥nus', vl_valor = 1000.00, dt_registro = '04/04/2023' 
     WHERE cd_usuario = 1234567 AND cd_despesas = 2;
 
 INSERT INTO despesas (cd_despesas, cd_usuario, ds_descricao, vl_valor, dt_registro) 
     VALUES (4, 1234567, 'Aluguel', 1000.00, '04/10/2024');
 
 UPDATE despesas 
-    SET ds_descricao = 'CondomÌnio', vl_valor = 500.00, dt_despesa = '04/05/2024' 
+    SET ds_descricao = 'Condom√≠nio', vl_valor = 500.00, dt_despesa = '04/05/2024' 
     WHERE cd_usuario = 1234567 AND codigo_usuario = 4;
 
 INSERT INTO investimentos (cd_investimento, cd_usuario, ds_descricao, vl_investido, dt_registro) 
