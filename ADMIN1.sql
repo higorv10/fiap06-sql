@@ -104,7 +104,7 @@ SELECT * FROM t_despesa WHERE cd_usuario = 1234567 ORDER BY dt_registro DESC;
 
 SELECT * FROM t_investimentos WHERE cd_usuario = 1234567; AND cd_investimento = 3;
 
-SElect * FROM t_investimentos WHERE cd_usuario = 1234567; ORDER BY dt_registro DESC;
+SELECT * FROM t_investimentos WHERE cd_usuario = 1234567; ORDER BY dt_registro DESC;
 
 SELECT u.nm_nome, u.id_email, i.vl_valor, d.nr_telefone
 FROM t_usuario 
